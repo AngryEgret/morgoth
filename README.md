@@ -93,6 +93,9 @@ stream
     |alert()
         // Trigger a critical alert when the window is marked as anomalous.
         .crit(lambda: "anomalous")
+        // Send message to slack.  Could be HTTP POST, email or PagerDuty.
+        .slack()
+             .channel('#alerts')
 ```
 
 
